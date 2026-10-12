@@ -1,0 +1,1295 @@
+{
+  "status": "PASS",
+  "distribution_version": "1.0.2",
+  "mathematical_payload_version": "1.0.0",
+  "completed_utc": "2026-10-12T09:07:06.643179+00:00",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "control_count": 70,
+  "normal_commands": 8,
+  "disabled_assertion_entrypoint_controls": 44,
+  "mutated_matching_disabled_controls": 4,
+  "records": [
+    {
+      "control": "normal-core",
+      "command": [
+        "verify.py"
+      ],
+      "mode": "normal",
+      "expected_success": true,
+      "exit_code": 0,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/normal-core.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "555015b550c7ab70059f11b6c28008577198991d34874859bf4f311b76de206c",
+        "sanitized_sha256": "d0ba1709f649156f338aa4ad1b51c31484f11501a44af40a12412dda69052c91",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "normal-independent",
+      "command": [
+        "audits/independent_coefficients.py",
+        "--primary-coefficients",
+        "coefficients.json"
+      ],
+      "mode": "normal",
+      "expected_success": true,
+      "exit_code": 0,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/normal-independent.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "532ff4e955c81b17643e614093c47b5517dc7739e0c69e0757ce2b1e4a3f1b8f",
+        "sanitized_sha256": "9f04fcaae861804a229b804cd0c88346599d043c5ebe5ab8d545dadee8555ed4",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "normal-matching",
+      "command": [
+        "audits/check_matching.py"
+      ],
+      "mode": "normal",
+      "expected_success": true,
+      "exit_code": 0,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/normal-matching.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "2b601d31635524ab2247a89857ac5c513aacece680e32ee18f1a19fe454aaa24",
+        "sanitized_sha256": "6a4478ffa78b46b31ee306997af661f7cd807e5407135646594523f221871480",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "normal-determinant",
+      "command": [
+        "audits/check_determinant_identity.py"
+      ],
+      "mode": "normal",
+      "expected_success": true,
+      "exit_code": 0,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/normal-determinant.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "e215408728008231dfc4cb8580aa2453441f837825e687f8c1a97e9faea15316",
+        "sanitized_sha256": "4709ce2460cf0a5c2589ccdc0d770c1cfd59f22fae0700e89f78e5da7ac70a66",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "normal-full",
+      "command": [
+        "run_all.py"
+      ],
+      "mode": "normal",
+      "expected_success": true,
+      "exit_code": 0,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/normal-full.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "ce00ad35ab0a2f967f8fe92edf959009895b3793d8357dd460cc41213a67d4f2",
+        "sanitized_sha256": "252577ad91dabb163fed714d5dc80eeb95a476f8e5fcd9a2e64b027e19daacfc",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "normal-third-coefficients",
+      "command": [
+        "audits/additional/audit_independent.py"
+      ],
+      "mode": "normal",
+      "expected_success": true,
+      "exit_code": 0,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/normal-third-coefficients.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "e93e3b79491719e19161eafc12d7caa796fe62ac14f28e8670f664226fd77373",
+        "sanitized_sha256": "9eb1d165ad6dbdd8dff3240eeee6c4c683741445de0ad13c93c406139e0e51df",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "normal-direct-generic-matching",
+      "command": [
+        "audits/additional/matching_direct_audit.py"
+      ],
+      "mode": "normal",
+      "expected_success": true,
+      "exit_code": 0,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/normal-direct-generic-matching.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "fd311d9a4c18811acaba12660a8511106d8e68ac00145ca808760f2a0ef3e66d",
+        "sanitized_sha256": "e0e10cec836dece389dc08d18d9b1190e5a6ab8f454caf483795050a8b65f26e",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "normal-singular-roots",
+      "command": [
+        "audits/additional/singular_root_audit.py"
+      ],
+      "mode": "normal",
+      "expected_success": true,
+      "exit_code": 0,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/normal-singular-roots.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "f56e140a796ee19f36197dd421c057d5a20f04f12ca2499678e23e487ceb0092",
+        "sanitized_sha256": "d2e3f5a257a02f4b14c5b04ba743cb7b748da93e5c3561a1a3b494e574e79e65",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-core-O",
+      "command": [
+        "verify.py"
+      ],
+      "mode": "-O",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-core-O.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "dacc8917f3958b588fa3ebedc7a782e739763ba16ba96d5da7878a332b7d94ce",
+        "sanitized_sha256": "251967e6d45c32c5a9c3ab597bd1ff83d87cb418b0ebccc05bc523926ff7833c",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-core-OO",
+      "command": [
+        "verify.py"
+      ],
+      "mode": "-OO",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-core-OO.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "dacc8917f3958b588fa3ebedc7a782e739763ba16ba96d5da7878a332b7d94ce",
+        "sanitized_sha256": "251967e6d45c32c5a9c3ab597bd1ff83d87cb418b0ebccc05bc523926ff7833c",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-core-PYTHONOPTIMIZE-1",
+      "command": [
+        "verify.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=1",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-core-PYTHONOPTIMIZE-1.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "dacc8917f3958b588fa3ebedc7a782e739763ba16ba96d5da7878a332b7d94ce",
+        "sanitized_sha256": "251967e6d45c32c5a9c3ab597bd1ff83d87cb418b0ebccc05bc523926ff7833c",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-core-PYTHONOPTIMIZE-2",
+      "command": [
+        "verify.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=2",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-core-PYTHONOPTIMIZE-2.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "dacc8917f3958b588fa3ebedc7a782e739763ba16ba96d5da7878a332b7d94ce",
+        "sanitized_sha256": "251967e6d45c32c5a9c3ab597bd1ff83d87cb418b0ebccc05bc523926ff7833c",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-independent-O",
+      "command": [
+        "audits/independent_coefficients.py",
+        "--primary-coefficients",
+        "coefficients.json"
+      ],
+      "mode": "-O",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-independent-O.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "935debc8a0f401cbb1954259454e2e5ec5448978fc18ff01f47cf668ad01a16a",
+        "sanitized_sha256": "a26fee6d2bd63d73ff0e517f650b03d22e47c1813442ede1106d645a6a0019c8",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-independent-OO",
+      "command": [
+        "audits/independent_coefficients.py",
+        "--primary-coefficients",
+        "coefficients.json"
+      ],
+      "mode": "-OO",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-independent-OO.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "935debc8a0f401cbb1954259454e2e5ec5448978fc18ff01f47cf668ad01a16a",
+        "sanitized_sha256": "a26fee6d2bd63d73ff0e517f650b03d22e47c1813442ede1106d645a6a0019c8",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-independent-PYTHONOPTIMIZE-1",
+      "command": [
+        "audits/independent_coefficients.py",
+        "--primary-coefficients",
+        "coefficients.json"
+      ],
+      "mode": "PYTHONOPTIMIZE=1",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-independent-PYTHONOPTIMIZE-1.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "935debc8a0f401cbb1954259454e2e5ec5448978fc18ff01f47cf668ad01a16a",
+        "sanitized_sha256": "a26fee6d2bd63d73ff0e517f650b03d22e47c1813442ede1106d645a6a0019c8",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-independent-PYTHONOPTIMIZE-2",
+      "command": [
+        "audits/independent_coefficients.py",
+        "--primary-coefficients",
+        "coefficients.json"
+      ],
+      "mode": "PYTHONOPTIMIZE=2",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-independent-PYTHONOPTIMIZE-2.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "935debc8a0f401cbb1954259454e2e5ec5448978fc18ff01f47cf668ad01a16a",
+        "sanitized_sha256": "a26fee6d2bd63d73ff0e517f650b03d22e47c1813442ede1106d645a6a0019c8",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-matching-O",
+      "command": [
+        "audits/check_matching.py"
+      ],
+      "mode": "-O",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-matching-O.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "84dbcf1abfc833497e73cf300571090be8ccf6f417d291640500f517ebbc5842",
+        "sanitized_sha256": "d79e63f46a2a76f1728f69ae9527b003e7f6208de7c5dafcff99aeff5e43ebe0",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-matching-OO",
+      "command": [
+        "audits/check_matching.py"
+      ],
+      "mode": "-OO",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-matching-OO.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "84dbcf1abfc833497e73cf300571090be8ccf6f417d291640500f517ebbc5842",
+        "sanitized_sha256": "d79e63f46a2a76f1728f69ae9527b003e7f6208de7c5dafcff99aeff5e43ebe0",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-matching-PYTHONOPTIMIZE-1",
+      "command": [
+        "audits/check_matching.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=1",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-matching-PYTHONOPTIMIZE-1.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "84dbcf1abfc833497e73cf300571090be8ccf6f417d291640500f517ebbc5842",
+        "sanitized_sha256": "d79e63f46a2a76f1728f69ae9527b003e7f6208de7c5dafcff99aeff5e43ebe0",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-matching-PYTHONOPTIMIZE-2",
+      "command": [
+        "audits/check_matching.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=2",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-matching-PYTHONOPTIMIZE-2.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "84dbcf1abfc833497e73cf300571090be8ccf6f417d291640500f517ebbc5842",
+        "sanitized_sha256": "d79e63f46a2a76f1728f69ae9527b003e7f6208de7c5dafcff99aeff5e43ebe0",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-determinant-O",
+      "command": [
+        "audits/check_determinant_identity.py"
+      ],
+      "mode": "-O",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-determinant-O.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "4c7c71f1b4f1f6996cb68d95bc4db3e704fe3d6d3b64241116a335c93a2f39cc",
+        "sanitized_sha256": "251967e6d45c32c5a9c3ab597bd1ff83d87cb418b0ebccc05bc523926ff7833c",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-determinant-OO",
+      "command": [
+        "audits/check_determinant_identity.py"
+      ],
+      "mode": "-OO",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-determinant-OO.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "4c7c71f1b4f1f6996cb68d95bc4db3e704fe3d6d3b64241116a335c93a2f39cc",
+        "sanitized_sha256": "251967e6d45c32c5a9c3ab597bd1ff83d87cb418b0ebccc05bc523926ff7833c",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-determinant-PYTHONOPTIMIZE-1",
+      "command": [
+        "audits/check_determinant_identity.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=1",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-determinant-PYTHONOPTIMIZE-1.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "4c7c71f1b4f1f6996cb68d95bc4db3e704fe3d6d3b64241116a335c93a2f39cc",
+        "sanitized_sha256": "251967e6d45c32c5a9c3ab597bd1ff83d87cb418b0ebccc05bc523926ff7833c",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-determinant-PYTHONOPTIMIZE-2",
+      "command": [
+        "audits/check_determinant_identity.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=2",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-determinant-PYTHONOPTIMIZE-2.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "4c7c71f1b4f1f6996cb68d95bc4db3e704fe3d6d3b64241116a335c93a2f39cc",
+        "sanitized_sha256": "251967e6d45c32c5a9c3ab597bd1ff83d87cb418b0ebccc05bc523926ff7833c",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-full-O",
+      "command": [
+        "run_all.py"
+      ],
+      "mode": "-O",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-full-O.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "81e3a4f57897fd8ff1401fae614f78f19c552d8248a444ef0d5fe00622eb3fb3",
+        "sanitized_sha256": "128f762a71d4f63f1d2a48eeaa73ffe38192381c404978f94be59f5a52d9e18a",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-full-OO",
+      "command": [
+        "run_all.py"
+      ],
+      "mode": "-OO",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-full-OO.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "81e3a4f57897fd8ff1401fae614f78f19c552d8248a444ef0d5fe00622eb3fb3",
+        "sanitized_sha256": "128f762a71d4f63f1d2a48eeaa73ffe38192381c404978f94be59f5a52d9e18a",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-full-PYTHONOPTIMIZE-1",
+      "command": [
+        "run_all.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=1",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-full-PYTHONOPTIMIZE-1.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "81e3a4f57897fd8ff1401fae614f78f19c552d8248a444ef0d5fe00622eb3fb3",
+        "sanitized_sha256": "128f762a71d4f63f1d2a48eeaa73ffe38192381c404978f94be59f5a52d9e18a",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-full-PYTHONOPTIMIZE-2",
+      "command": [
+        "run_all.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=2",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-full-PYTHONOPTIMIZE-2.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "81e3a4f57897fd8ff1401fae614f78f19c552d8248a444ef0d5fe00622eb3fb3",
+        "sanitized_sha256": "128f762a71d4f63f1d2a48eeaa73ffe38192381c404978f94be59f5a52d9e18a",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-third-coefficients-O",
+      "command": [
+        "audits/additional/audit_independent.py"
+      ],
+      "mode": "-O",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-third-coefficients-O.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "0d896e55ba9b8b98c83d77abb7e0968dc171c9dccccd3605381188e044192ec6",
+        "sanitized_sha256": "61943bd09eb09485178e626e8c9f93271210873eb1ff29e06230f9ee1b6ca60a",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-third-coefficients-OO",
+      "command": [
+        "audits/additional/audit_independent.py"
+      ],
+      "mode": "-OO",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-third-coefficients-OO.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "0d896e55ba9b8b98c83d77abb7e0968dc171c9dccccd3605381188e044192ec6",
+        "sanitized_sha256": "61943bd09eb09485178e626e8c9f93271210873eb1ff29e06230f9ee1b6ca60a",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-third-coefficients-PYTHONOPTIMIZE-1",
+      "command": [
+        "audits/additional/audit_independent.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=1",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-third-coefficients-PYTHONOPTIMIZE-1.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "0d896e55ba9b8b98c83d77abb7e0968dc171c9dccccd3605381188e044192ec6",
+        "sanitized_sha256": "61943bd09eb09485178e626e8c9f93271210873eb1ff29e06230f9ee1b6ca60a",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-third-coefficients-PYTHONOPTIMIZE-2",
+      "command": [
+        "audits/additional/audit_independent.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=2",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-third-coefficients-PYTHONOPTIMIZE-2.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "0d896e55ba9b8b98c83d77abb7e0968dc171c9dccccd3605381188e044192ec6",
+        "sanitized_sha256": "61943bd09eb09485178e626e8c9f93271210873eb1ff29e06230f9ee1b6ca60a",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-direct-generic-matching-O",
+      "command": [
+        "audits/additional/matching_direct_audit.py"
+      ],
+      "mode": "-O",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-direct-generic-matching-O.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "3420af1f1c27c8dcacfbbf77bc55aadd438c9a07fc805738080102b3c2d47cf3",
+        "sanitized_sha256": "61943bd09eb09485178e626e8c9f93271210873eb1ff29e06230f9ee1b6ca60a",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-direct-generic-matching-OO",
+      "command": [
+        "audits/additional/matching_direct_audit.py"
+      ],
+      "mode": "-OO",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-direct-generic-matching-OO.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "3420af1f1c27c8dcacfbbf77bc55aadd438c9a07fc805738080102b3c2d47cf3",
+        "sanitized_sha256": "61943bd09eb09485178e626e8c9f93271210873eb1ff29e06230f9ee1b6ca60a",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-direct-generic-matching-PYTHONOPTIMIZE-1",
+      "command": [
+        "audits/additional/matching_direct_audit.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=1",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-direct-generic-matching-PYTHONOPTIMIZE-1.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "3420af1f1c27c8dcacfbbf77bc55aadd438c9a07fc805738080102b3c2d47cf3",
+        "sanitized_sha256": "61943bd09eb09485178e626e8c9f93271210873eb1ff29e06230f9ee1b6ca60a",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-direct-generic-matching-PYTHONOPTIMIZE-2",
+      "command": [
+        "audits/additional/matching_direct_audit.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=2",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-direct-generic-matching-PYTHONOPTIMIZE-2.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "3420af1f1c27c8dcacfbbf77bc55aadd438c9a07fc805738080102b3c2d47cf3",
+        "sanitized_sha256": "61943bd09eb09485178e626e8c9f93271210873eb1ff29e06230f9ee1b6ca60a",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-singular-roots-O",
+      "command": [
+        "audits/additional/singular_root_audit.py"
+      ],
+      "mode": "-O",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-singular-roots-O.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "96688be68f510e91c3eb16e39e105e1ce711b3b544e9a84497d37e1be138f2d0",
+        "sanitized_sha256": "61943bd09eb09485178e626e8c9f93271210873eb1ff29e06230f9ee1b6ca60a",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-singular-roots-OO",
+      "command": [
+        "audits/additional/singular_root_audit.py"
+      ],
+      "mode": "-OO",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-singular-roots-OO.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "96688be68f510e91c3eb16e39e105e1ce711b3b544e9a84497d37e1be138f2d0",
+        "sanitized_sha256": "61943bd09eb09485178e626e8c9f93271210873eb1ff29e06230f9ee1b6ca60a",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-singular-roots-PYTHONOPTIMIZE-1",
+      "command": [
+        "audits/additional/singular_root_audit.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=1",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-singular-roots-PYTHONOPTIMIZE-1.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "96688be68f510e91c3eb16e39e105e1ce711b3b544e9a84497d37e1be138f2d0",
+        "sanitized_sha256": "61943bd09eb09485178e626e8c9f93271210873eb1ff29e06230f9ee1b6ca60a",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-singular-roots-PYTHONOPTIMIZE-2",
+      "command": [
+        "audits/additional/singular_root_audit.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=2",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-singular-roots-PYTHONOPTIMIZE-2.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "96688be68f510e91c3eb16e39e105e1ce711b3b544e9a84497d37e1be138f2d0",
+        "sanitized_sha256": "61943bd09eb09485178e626e8c9f93271210873eb1ff29e06230f9ee1b6ca60a",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-packer-O",
+      "command": [
+        "pack_handoff.py"
+      ],
+      "mode": "-O",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-packer-O.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "ce607ec446214489130772c3f3b7d175be1bdf2d2b53874dc4dc4f6c434c0360",
+        "sanitized_sha256": "af63989c916889db0d175435e4f53f1a3762f02048ff717921c872b052e279b0",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-packer-OO",
+      "command": [
+        "pack_handoff.py"
+      ],
+      "mode": "-OO",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-packer-OO.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "ce607ec446214489130772c3f3b7d175be1bdf2d2b53874dc4dc4f6c434c0360",
+        "sanitized_sha256": "af63989c916889db0d175435e4f53f1a3762f02048ff717921c872b052e279b0",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-packer-PYTHONOPTIMIZE-1",
+      "command": [
+        "pack_handoff.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=1",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-packer-PYTHONOPTIMIZE-1.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "ce607ec446214489130772c3f3b7d175be1bdf2d2b53874dc4dc4f6c434c0360",
+        "sanitized_sha256": "af63989c916889db0d175435e4f53f1a3762f02048ff717921c872b052e279b0",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-packer-PYTHONOPTIMIZE-2",
+      "command": [
+        "pack_handoff.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=2",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-packer-PYTHONOPTIMIZE-2.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "ce607ec446214489130772c3f3b7d175be1bdf2d2b53874dc4dc4f6c434c0360",
+        "sanitized_sha256": "af63989c916889db0d175435e4f53f1a3762f02048ff717921c872b052e279b0",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-hardening-controls-O",
+      "command": [
+        "public_controls.py"
+      ],
+      "mode": "-O",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-hardening-controls-O.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "302793386c8aa87d903874266665ae7c7be8f03ad712689328c61bcccc7130c2",
+        "sanitized_sha256": "14d2276af8712f23bbf25bdb226ff1e35d59d7003a7570f48c23546114b76d81",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-hardening-controls-OO",
+      "command": [
+        "public_controls.py"
+      ],
+      "mode": "-OO",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-hardening-controls-OO.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "302793386c8aa87d903874266665ae7c7be8f03ad712689328c61bcccc7130c2",
+        "sanitized_sha256": "14d2276af8712f23bbf25bdb226ff1e35d59d7003a7570f48c23546114b76d81",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-hardening-controls-PYTHONOPTIMIZE-1",
+      "command": [
+        "public_controls.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=1",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-hardening-controls-PYTHONOPTIMIZE-1.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "302793386c8aa87d903874266665ae7c7be8f03ad712689328c61bcccc7130c2",
+        "sanitized_sha256": "14d2276af8712f23bbf25bdb226ff1e35d59d7003a7570f48c23546114b76d81",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-hardening-controls-PYTHONOPTIMIZE-2",
+      "command": [
+        "public_controls.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=2",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-hardening-controls-PYTHONOPTIMIZE-2.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "302793386c8aa87d903874266665ae7c7be8f03ad712689328c61bcccc7130c2",
+        "sanitized_sha256": "14d2276af8712f23bbf25bdb226ff1e35d59d7003a7570f48c23546114b76d81",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-privacy-scan-O",
+      "command": [
+        "privacy_scan.py"
+      ],
+      "mode": "-O",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-privacy-scan-O.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "74863a51acac8bb447cf32a471620be990787be0ca0b7f34b18132d6035db722",
+        "sanitized_sha256": "754924adb5b84534fe9f3a3237c7e4023274eacf89afc3c14dc69935540495e9",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-privacy-scan-OO",
+      "command": [
+        "privacy_scan.py"
+      ],
+      "mode": "-OO",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-privacy-scan-OO.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "74863a51acac8bb447cf32a471620be990787be0ca0b7f34b18132d6035db722",
+        "sanitized_sha256": "754924adb5b84534fe9f3a3237c7e4023274eacf89afc3c14dc69935540495e9",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-privacy-scan-PYTHONOPTIMIZE-1",
+      "command": [
+        "privacy_scan.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=1",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-privacy-scan-PYTHONOPTIMIZE-1.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "74863a51acac8bb447cf32a471620be990787be0ca0b7f34b18132d6035db722",
+        "sanitized_sha256": "754924adb5b84534fe9f3a3237c7e4023274eacf89afc3c14dc69935540495e9",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "disabled-privacy-scan-PYTHONOPTIMIZE-2",
+      "command": [
+        "privacy_scan.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=2",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/disabled-privacy-scan-PYTHONOPTIMIZE-2.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "74863a51acac8bb447cf32a471620be990787be0ca0b7f34b18132d6035db722",
+        "sanitized_sha256": "754924adb5b84534fe9f3a3237c7e4023274eacf89afc3c14dc69935540495e9",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "corrupt-coefficient-core-rejected",
+      "command": [
+        "verify.py"
+      ],
+      "mode": "normal",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/corrupt-coefficient-core-rejected.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "8e3ef4bb378758f2b1e69a901f8c8562355cb0e4114ddfa4b056ffe13a06b2a6",
+        "sanitized_sha256": "bf57d6bb5ea09db625d9ea190ac2b7671d8c67ec4c9ab7c831892d6aaf7006f7",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "corrupt-coefficient-independent-rejected",
+      "command": [
+        "audits/independent_coefficients.py",
+        "--primary-coefficients",
+        "coefficients.json"
+      ],
+      "mode": "normal",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/corrupt-coefficient-independent-rejected.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "376926a494446fd2402853c5eb692b6906d153ed1de24ba3f05ce8c0592bbc8e",
+        "sanitized_sha256": "ce704355cb58249b0d40bd912b44ca4c14dbc29a21574880ffae204cd64bb058",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "missing-matrix-rejected",
+      "command": [
+        "audits/independent_coefficients.py",
+        "--primary-coefficients",
+        "coefficients.json"
+      ],
+      "mode": "normal",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/missing-matrix-rejected.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "37f8ad5297dc9440edb02708e7996c04d60348837b9c4f61a8e9a17dbb4cb580",
+        "sanitized_sha256": "c33eda25acdb041125f86e528f2ea6a87572b1a258d80d8f5d7e3fd4d2b99661",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "false-matching-normal-rejected",
+      "command": [
+        "audits/check_matching.py"
+      ],
+      "mode": "normal",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/false-matching-normal-rejected.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "ecd9b09daae28c76342c9220f38984df43c480fed1ea8b529ac5843ddcb13749",
+        "sanitized_sha256": "7f64bc71cd99b5448e6826e615a1fc71cf5ae45c2e524c2ee988bbf314343173",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "false-matching-disabled-O",
+      "command": [
+        "audits/check_matching.py"
+      ],
+      "mode": "-O",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/false-matching-disabled-O.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "e406ea50f8971cc0c4e615bc606cb71098198b16d84b4d519d442f0ba60d42dd",
+        "sanitized_sha256": "d79e63f46a2a76f1728f69ae9527b003e7f6208de7c5dafcff99aeff5e43ebe0",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "false-matching-disabled-OO",
+      "command": [
+        "audits/check_matching.py"
+      ],
+      "mode": "-OO",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/false-matching-disabled-OO.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "e406ea50f8971cc0c4e615bc606cb71098198b16d84b4d519d442f0ba60d42dd",
+        "sanitized_sha256": "d79e63f46a2a76f1728f69ae9527b003e7f6208de7c5dafcff99aeff5e43ebe0",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "false-matching-disabled-PYTHONOPTIMIZE-1",
+      "command": [
+        "audits/check_matching.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=1",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/false-matching-disabled-PYTHONOPTIMIZE-1.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "e406ea50f8971cc0c4e615bc606cb71098198b16d84b4d519d442f0ba60d42dd",
+        "sanitized_sha256": "d79e63f46a2a76f1728f69ae9527b003e7f6208de7c5dafcff99aeff5e43ebe0",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "false-matching-disabled-PYTHONOPTIMIZE-2",
+      "command": [
+        "audits/check_matching.py"
+      ],
+      "mode": "PYTHONOPTIMIZE=2",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": true,
+      "log": "evidence/sanitized/hardening/false-matching-disabled-PYTHONOPTIMIZE-2.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "e406ea50f8971cc0c4e615bc606cb71098198b16d84b4d519d442f0ba60d42dd",
+        "sanitized_sha256": "d79e63f46a2a76f1728f69ae9527b003e7f6208de7c5dafcff99aeff5e43ebe0",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "false-Phi-sign-rejected",
+      "command": [
+        "audits/check_determinant_identity.py"
+      ],
+      "mode": "normal",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/false-Phi-sign-rejected.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "89d2a26228d645c0167703f365cfd579d4f3c06b46b65a3b7abc3b4b8536d52a",
+        "sanitized_sha256": "85c078c3ad6388213e5ffd5f4136c704dd810524537370033fe2073a8e8e9e08",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "source-corruption-rejected",
+      "command": [
+        "verify.py"
+      ],
+      "mode": "normal",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/source-corruption-rejected.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "a09cdbcbb755728ad4f107872218b743bbe49797f6948e2a7130e7da4543b0bd",
+        "sanitized_sha256": "bac639bf97e8e8e44fc79c30a4e16faa1a63ba7d6db04561834a4a91f9a38035",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "forged-rank-certificate-recomputed",
+      "command": [
+        "verify.py"
+      ],
+      "mode": "normal",
+      "expected_success": true,
+      "exit_code": 0,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/forged-rank-certificate-recomputed.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "555015b550c7ab70059f11b6c28008577198991d34874859bf4f311b76de206c",
+        "sanitized_sha256": "d0ba1709f649156f338aa4ad1b51c31484f11501a44af40a12412dda69052c91",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "forged-comparison-recomputed",
+      "command": [
+        "audits/independent_coefficients.py",
+        "--primary-coefficients",
+        "coefficients.json"
+      ],
+      "mode": "normal",
+      "expected_success": true,
+      "exit_code": 0,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/forged-comparison-recomputed.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "532ff4e955c81b17643e614093c47b5517dc7739e0c69e0757ce2b1e4a3f1b8f",
+        "sanitized_sha256": "9f04fcaae861804a229b804cd0c88346599d043c5ebe5ab8d545dadee8555ed4",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "forged-PASS-summary-cannot-authorize-replay",
+      "command": [
+        "run_all.py"
+      ],
+      "mode": "normal",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/forged-PASS-summary-cannot-authorize-replay.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "8bd10aace184c6bc1da47140ea5dcfe70bec1faf27b9d2bd031014ec7ec24582",
+        "sanitized_sha256": "fe53150b22674d38c48f648a92de8832b45397be02050b51dafd7afa1b30041c",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "forged-PASS-summary-cannot-authorize-packaging",
+      "command": [
+        "pack_handoff.py"
+      ],
+      "mode": "normal",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/forged-PASS-summary-cannot-authorize-packaging.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "5a06ed6c2b506ed686f010306c21ed66bc187e3c4e403e9a5d714b3d90311735",
+        "sanitized_sha256": "e5f4b7ba5b40fc1aa3ba6f1ec25addd2b15ae63ae2d5e82e8a9c21415e1e238d",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "privacy-fixture-filesystem-rejected",
+      "command": [
+        "privacy_scan.py"
+      ],
+      "mode": "normal",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/privacy-fixture-filesystem-rejected.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "cd447b5727daf22a149b09028b8dc7c2b9712024c767d6bb772fc755d7993f67",
+        "sanitized_sha256": "080afd82a60b1c54d89c27b94dd5253fc8fbccd1d29cd541a14754942d9be866",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "privacy-fixture-library-rejected",
+      "command": [
+        "privacy_scan.py"
+      ],
+      "mode": "normal",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/privacy-fixture-library-rejected.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "624974434615295fec6a88adba18ee6bca74fee009a9bc8e83519c1cf0e2219b",
+        "sanitized_sha256": "9d94851cd22382948a70e25acbc6d9cbc28308fd1256b18143afe41a2d465c67",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "privacy-fixture-email-rejected",
+      "command": [
+        "privacy_scan.py"
+      ],
+      "mode": "normal",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/privacy-fixture-email-rejected.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "1a804ae140c7010b27e42859ed4ce31e87fec5985de2c58b4fbfba756be1b80b",
+        "sanitized_sha256": "0e1006ece37a25cc8c060e8891b37315b065b10e6137230754b3f79a152950e6",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "privacy-fixture-credential-rejected",
+      "command": [
+        "privacy_scan.py"
+      ],
+      "mode": "normal",
+      "expected_success": false,
+      "exit_code": 1,
+      "expectation_met": true,
+      "no_PASS_with_assertions_disabled": false,
+      "log": "evidence/sanitized/hardening/privacy-fixture-credential-rejected.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "339981e194fbb9a269387ffd68ff03010d266a07f35cb554f6f7d335e2bfbe29",
+        "sanitized_sha256": "408b005942a6627b3f923395482e1a4a6894427dc4834d809ba112f59218050e",
+        "raw_retention": "external private directory"
+      }
+    }
+  ],
+  "scope_limits": [
+    "The guards reject optimized execution; they do not implement assertion-free mathematical verification.",
+    "All original mathematical checks remain present.",
+    "Saved certificate outputs are recomputed, not treated as proof inputs.",
+    "Finite tests supplement the unchanged written proof; no new theorem review or research was performed."
+  ]
+}

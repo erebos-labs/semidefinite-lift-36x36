@@ -1,0 +1,14 @@
+SANITIZED EXECUTION LOG: filesystem paths redacted; outcomes and algebra unchanged.
+{
+  "status": "FAIL",
+  "files_scanned": 132,
+  "hits": [
+    {
+      "file": "deliberate-privacy-fixture.txt",
+      "rule": "private-filesystem-root",
+      "line": 1
+    }
+  ],
+  "scope": "UTF-8 public files; no private directory inventory, account data, or network calls.",
+  "limits": "Pattern scan plus a separate manual content review; no claim that heuristic scanning proves absence of every possible secret."
+}

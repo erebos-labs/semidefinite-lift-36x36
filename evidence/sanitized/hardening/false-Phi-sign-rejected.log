@@ -1,0 +1,9 @@
+SANITIZED EXECUTION LOG: filesystem paths redacted; outcomes and algebra unchanged.
+Traceback (most recent call last):
+  File "<filesystem-path>", line 50, in <module>
+    check_zero(b.T*hat_adj*b+phi)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "<filesystem-path>", line 28, in check_zero
+    assert s.expand(value)==0
+           ^^^^^^^^^^^^^^^^^^
+AssertionError

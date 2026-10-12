@@ -1,0 +1,3 @@
+# Used only by the universal matching and polynomial-elimination checkers.
+# Core coefficient reconstruction and rank checks need Python stdlib only.
+sympy==1.14.0

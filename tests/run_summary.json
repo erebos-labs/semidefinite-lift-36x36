@@ -1,0 +1,69 @@
+{
+  "version": "1.0.0",
+  "started_utc": "2026-10-12T09:12:30.649740+00:00",
+  "python": "3.14.7",
+  "sympy": "1.14.0",
+  "arithmetic": "exact rational/quadratic-field/polynomial identities",
+  "stages": [
+    {
+      "name": "core",
+      "command": [
+        "python",
+        "verify.py"
+      ],
+      "exit_code": 0,
+      "log": "tests/core.log",
+      "log_sha256": "d0ba1709f649156f338aa4ad1b51c31484f11501a44af40a12412dda69052c91",
+      "original_runtime_log_sha256": "555015b550c7ab70059f11b6c28008577198991d34874859bf4f311b76de206c",
+      "log_representation": "sanitized-copy"
+    },
+    {
+      "name": "independent",
+      "command": [
+        "python",
+        "audits/independent_coefficients.py",
+        "--primary-coefficients",
+        "coefficients.json"
+      ],
+      "exit_code": 0,
+      "log": "tests/independent.log",
+      "log_sha256": "9f04fcaae861804a229b804cd0c88346599d043c5ebe5ab8d545dadee8555ed4",
+      "original_runtime_log_sha256": "532ff4e955c81b17643e614093c47b5517dc7739e0c69e0757ce2b1e4a3f1b8f",
+      "log_representation": "sanitized-copy"
+    },
+    {
+      "name": "matching",
+      "command": [
+        "python",
+        "audits/check_matching.py"
+      ],
+      "exit_code": 0,
+      "log": "tests/matching.log",
+      "log_sha256": "6a4478ffa78b46b31ee306997af661f7cd807e5407135646594523f221871480",
+      "original_runtime_log_sha256": "2b601d31635524ab2247a89857ac5c513aacece680e32ee18f1a19fe454aaa24",
+      "log_representation": "sanitized-copy"
+    },
+    {
+      "name": "determinant",
+      "command": [
+        "python",
+        "audits/check_determinant_identity.py"
+      ],
+      "exit_code": 0,
+      "log": "tests/determinant.log",
+      "log_sha256": "4709ce2460cf0a5c2589ccdc0d770c1cfd59f22fae0700e89f78e5da7ac70a66",
+      "original_runtime_log_sha256": "e215408728008231dfc4cb8580aa2453441f837825e687f8c1a97e9faea15316",
+      "log_representation": "sanitized-copy"
+    }
+  ],
+  "status": "PASS",
+  "completed_utc": "2026-10-12T09:12:33.074690+00:00",
+  "scope_limits": [
+    "Written proof supplies universal cone equivalence and logical deductions",
+    "No Lean formalization or independent human peer review is claimed",
+    "No numerical conditioning/performance or global minimality claim",
+    "The independent stage repeats verification of the same fixed audit, not another search"
+  ],
+  "log_representation": "sanitized-copy",
+  "sanitization_scope": "Filesystem roots only; raw outputs retained privately for preparation when configured."
+}

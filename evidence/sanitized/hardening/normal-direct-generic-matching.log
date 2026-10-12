@@ -1,0 +1,20 @@
+SANITIZED EXECUTION LOG: filesystem paths redacted; outcomes and algebra unchanged.
+{
+  "status": "PASS",
+  "arithmetic": "exact cleared-denominator Laurent polynomials",
+  "generic_symmetric_S_no_definiteness_assumption": true,
+  "direct_matching_pairing_numerator_zero": true,
+  "C_numerator_column_supports": [
+    [
+      -2,
+      0
+    ],
+    [
+      0,
+      2
+    ]
+  ],
+  "generic_rotation_scaled_unitary": true,
+  "delta_zero_branch": "Reviewed separately in written proof and reproduced 42-check replay; no division at zero",
+  "seconds_for_information": 1.404184249928221
+}

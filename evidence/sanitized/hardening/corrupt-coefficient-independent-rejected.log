@@ -1,0 +1,126 @@
+SANITIZED EXECUTION LOG: filesystem paths redacted; outcomes and algebra unchanged.
+{
+  "arithmetic": "Exact fractions in Q(sqrt(2),i), no floating point",
+  "auxiliary_coefficient_family_common_vector_kernel_dimension": 1,
+  "auxiliary_map_rank": 24,
+  "coefficient_matrix_count": 47,
+  "coefficient_sha256": "f36e45bee3fab51cb3830ba23825d7e6cb7267cd3f77ca35372eac0842809fed",
+  "common_kernel_dimension": 0,
+  "full_coefficient_map_rank": 47,
+  "limitations": [
+    "This program checks coefficients and the stated bounded redundancy audit.",
+    "Exactness of the projected cone and all singular boundary claims require the mathematical proof.",
+    "It does not check originality or global minimality."
+  ],
+  "lower_triangle_complete_coefficient_dictionary_equality": true,
+  "matrix_dimension": 36,
+  "nonzero_upper_entries_total": 298,
+  "observed_laurent_support": {
+    "('X', 0, 0)": [
+      -2,
+      0,
+      2
+    ],
+    "('X', 0, 1)": [
+      -2,
+      0,
+      2
+    ],
+    "('X', 0, 2)": [
+      -2,
+      0,
+      2
+    ],
+    "('X', 0, 3)": [
+      -2,
+      0,
+      2
+    ],
+    "('X', 1, 1)": [
+      -2,
+      0,
+      2
+    ],
+    "('X', 1, 2)": [
+      -2,
+      0,
+      2
+    ],
+    "('X', 1, 3)": [
+      -2,
+      0,
+      2
+    ],
+    "('X', 2, 2)": [
+      -2,
+      0,
+      2
+    ],
+    "('X', 2, 3)": [
+      -2,
+      0,
+      2
+    ],
+    "('X', 3, 3)": [
+      -2,
+      0,
+      2
+    ],
+    "('Z', 0, 0)": [
+      0
+    ],
+    "('Z', 0, 1)": [
+      0
+    ],
+    "('Z', 0, 2)": [
+      0
+    ],
+    "('Z', 0, 3)": [
+      0
+    ],
+    "('Z', 1, 1)": [
+      0
+    ],
+    "('Z', 1, 2)": [
+      0
+    ],
+    "('Z', 1, 3)": [
+      0
+    ],
+    "('Z', 2, 2)": [
+      0
+    ],
+    "('Z', 2, 3)": [
+      0
+    ],
+    "('Z', 3, 3)": [
+      0
+    ],
+    "eta": [
+      -3,
+      -1,
+      1,
+      3
+    ],
+    "xi": [
+      -2,
+      0,
+      2
+    ]
+  },
+  "output_coefficient_family_common_vector_kernel_dimension": 0,
+  "realification_order": "Re first, Im first, Re second, Im second, u",
+  "source_contractions_verified": 28512,
+  "status": "PASS",
+  "symmetric_lower_triangle_independently_expanded": true
+}
+Traceback (most recent call last):
+  File "<filesystem-path>", line 591, in <module>
+    main()
+    ~~~~^^
+  File "<filesystem-path>", line 585, in main
+    comparison = compare_with_primary(args.primary_coefficients)
+  File "<filesystem-path>", line 515, in compare_with_primary
+    assert independent[k] == reconstructed_primary, ('coefficient mismatch', k, moments[k])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('coefficient mismatch', 0, ('X', 0, 0, '1'))

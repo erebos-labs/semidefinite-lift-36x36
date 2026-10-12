@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "started_utc": "2026-10-12T08:59:31.099436+00:00",
+  "python": "3.14.7",
+  "sympy": "1.14.0",
+  "arithmetic": "exact rational/quadratic-field/polynomial identities",
+  "stages": [
+    {
+      "name": "core",
+      "command": [
+        "python",
+        "verify.py"
+      ],
+      "exit_code": 1,
+      "log": "tests/core.log",
+      "log_sha256": "1954598ba612126e959454155d89416a2a4b6ca8e6b41c23aeec523873c31c39"
+    }
+  ],
+  "status": "FAIL"
+}

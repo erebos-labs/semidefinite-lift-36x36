@@ -1,0 +1,50 @@
+--- a/verify.py
++++ b/verify.py
+@@ -6,6 +6,9 @@
+ checks finite algebraic data and explicit exact boundary examples.
+ """
+ from __future__ import annotations
++
++if not __debug__:
++    raise RuntimeError("Run without -O: exact assertions must remain enabled")
+ 
+ import argparse
+ from fractions import Fraction as F
+--- a/audits/independent_coefficients.py
++++ b/audits/independent_coefficients.py
+@@ -17,6 +17,9 @@
+ """
+ 
+ from __future__ import annotations
++
++if not __debug__:
++    raise RuntimeError("Run without -O: exact assertions must remain enabled")
+ 
+ import argparse
+ import hashlib
+--- a/audits/check_matching.py
++++ b/audits/check_matching.py
+@@ -10,6 +10,10 @@
+ semidefiniteness.  The analytic implication from the scalar certificates to
+ cone membership is proved in matching_boundary_audit.md.
+ """
++
++
++if not __debug__:
++    raise RuntimeError("Run without -O: exact assertions must remain enabled")
+ 
+ import json
+ import sympy as s
+--- a/audits/check_determinant_identity.py
++++ b/audits/check_determinant_identity.py
+@@ -6,6 +6,10 @@
+ It cancels a nonzero polynomial in a polynomial ring, never assumes that
+ the evaluated X is invertible, and never changes the degree-20 p.
+ """
++
++if not __debug__:
++    raise RuntimeError("Run without -O: exact assertions must remain enabled")
++
+ import json
+ import sympy as s
+ 

@@ -1,0 +1,7 @@
+SANITIZED EXECUTION LOG: filesystem paths redacted; outcomes and algebra unchanged.
+PASS source_hashes
+PASS stored_coefficients
+PASS bounded_redundancy_audit
+PASS singular_boundary_regressions
+PASS independent_laurent_reconstruction
+Exact algebraic checks completed

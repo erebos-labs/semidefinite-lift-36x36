@@ -1,0 +1,27 @@
+SANITIZED EXECUTION LOG: filesystem paths redacted; outcomes and algebra unchanged.
+{
+  "status": "PASS",
+  "arithmetic": "exact polynomial, no division or floats",
+  "sympy_version": "1.14.0",
+  "checks": [
+    "X adj(X)=det(X) I",
+    "adj(X) X=det(X) I",
+    "det(X) is a nonzero polynomial (value 1 at I)",
+    "four arbitrary skew blocks give Phi of their Gram",
+    "all 400 entries of L R equal the displayed block-triangular target"
+  ],
+  "determinant_deduction": {
+    "det_R": "d^20",
+    "det_upper_left_target": "det(d (I4 tensor X)) = d^16 d^4 = d^20",
+    "det_lower_right_target": "det(d Z-Phi_y(adj X)) = the original p",
+    "identity": "d^20 det(L)=d^20 p",
+    "cancellation": "Cancel the nonzero polynomial d^20 in the integral polynomial ring",
+    "conclusion": "det(L)=p identically, hence for singular and nonsingular X",
+    "degree_reduction": "none; p remains homogeneous of degree 20"
+  },
+  "limits": [
+    "Uses the angular Gram identity checked separately",
+    "Does not expand the full degree-20 polynomial monomial by monomial",
+    "Determinant multiplicativity, triangular determinants, and integral-domain cancellation are mathematical proof rules, not Lean-checked"
+  ]
+}

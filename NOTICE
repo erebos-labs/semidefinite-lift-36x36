@@ -1,0 +1,25 @@
+Exact 36 x 36 semidefinite lift — public candidate 1.0.2
+
+This candidate includes unmodified source files from:
+OpenAI, An Exact Semidefinite Lift of a Nonspectrahedral Hyperbolicity Cone,
+October 5, 2026, openai/math, commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb.
+The upstream source is licensed under the Apache License, Version 2.0.
+Its license text is preserved in source/LICENSE and LICENSES/Apache-2.0.txt.
+
+The theorem note and mathematical reviews adapt and analyze that construction.
+They are not the upstream manuscript. The restricted test space, explicit
+compressed pencil, and verification work are described in THEOREM_PROOF.md.
+The original mathematical payload is unchanged in this public candidate.
+
+The 100 x 100 / 307-auxiliary baseline, angular factors, matching rotation,
+and singular-boundary proof mechanism are inherited and credited to the source.
+Nonspectrahedrality is inherited from the companion A nonspectrahedral
+hyperbolicity cone; that companion proof was not independently audited here.
+
+Original implementation and new release materials are offered under MIT only
+to the extent the contributor owns their original rights. This does not
+replace Apache-2.0 terms or grant rights in third-party material or trademarks.
+See LICENSING.md for the component-level scope.
+
+No claim of peer review, established originality, global minimality, Lean
+verification, or practical solver performance is made.

@@ -1,0 +1,126 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "control": "core-rejects-corrupt-coefficient",
+      "exit_code": 1,
+      "expected_success": false,
+      "expectation_met": true,
+      "log": "core-rejects-corrupt-coefficient.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "aa1d6c9ba9327893c5f393c917e0736ef5905531f4cf5819cda951651cf2b784",
+        "sanitized_sha256": "b66c3d3084cbe5524774344ff774c4256934cd2bd88982ecbde13a3eab08a472",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "independent-rejects-corrupt-coefficient",
+      "exit_code": 1,
+      "expected_success": false,
+      "expectation_met": true,
+      "log": "independent-rejects-corrupt-coefficient.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "195a59273cf7559fd4c0de095adea4df098014467e1c1701a29b7aef6b15bf5f",
+        "sanitized_sha256": "b3a0dbbe0f00460fec17ea1614f591654fc84adb48dfb341ff1d550667cf28d9",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "independent-rejects-missing-matrix",
+      "exit_code": 1,
+      "expected_success": false,
+      "expectation_met": true,
+      "log": "independent-rejects-missing-matrix.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "969138debc0f1a7a8658388a2cf3213106ac5f3dc66e408de087e7edf407f99e",
+        "sanitized_sha256": "78e587dd70be0ab40e14818ae2b1b5e0c03e3b764faa479278c39f47505b37d2",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "core-rejects-source-corruption",
+      "exit_code": 1,
+      "expected_success": false,
+      "expectation_met": true,
+      "log": "core-rejects-source-corruption.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "220c3e3ed46ba0fdadc29ae0166ff90a716f02dd1088349fe9bdf9aee84e7620",
+        "sanitized_sha256": "96fc1b6230f70cfdc20d747f893eca813c4d9aa33e8d4f53ba127d6094f77305",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "independent-rejects-wrong-output-selector",
+      "exit_code": 1,
+      "expected_success": false,
+      "expectation_met": true,
+      "log": "independent-rejects-wrong-output-selector.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "b7cf90dd3270169eaefed98aecbdd53a2a8b6be16422058abb9e385a0beed671",
+        "sanitized_sha256": "f1382041bc4ebf2d08db1b8e31eaadbccc0befad5fe9111d424a58d67f3846d0",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "matching-rejects-false-Gram-normal",
+      "exit_code": 1,
+      "expected_success": false,
+      "expectation_met": true,
+      "log": "matching-rejects-false-Gram-normal.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "162f74544a45838ed66b24872a40e258866a4a55180f0879cae88bfc1ba8763d",
+        "sanitized_sha256": "986de4afc513789bf3963f67dd618bc3a0b317ca47af7823f59860a65ea2a92d",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "matching-false-PASS-with-O",
+      "exit_code": 0,
+      "expected_success": true,
+      "expectation_met": true,
+      "log": "matching-false-PASS-with-O.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "2b601d31635524ab2247a89857ac5c513aacece680e32ee18f1a19fe454aaa24",
+        "sanitized_sha256": "6a4478ffa78b46b31ee306997af661f7cd807e5407135646594523f221871480",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "official-runner-rejects-O",
+      "exit_code": 1,
+      "expected_success": false,
+      "expectation_met": true,
+      "log": "official-runner-rejects-O.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "b5613f48462b4ecc340aa647740777fb02b7bed73e2004f8027450edc00996a3",
+        "sanitized_sha256": "128f762a71d4f63f1d2a48eeaa73ffe38192381c404978f94be59f5a52d9e18a",
+        "raw_retention": "external private directory"
+      }
+    },
+    {
+      "control": "determinant-rejects-wrong-Phi-sign",
+      "exit_code": 1,
+      "expected_success": false,
+      "expectation_met": true,
+      "log": "determinant-rejects-wrong-Phi-sign.log",
+      "log_representation": {
+        "representation": "sanitized-copy",
+        "raw_sha256": "64e21f60e1318a00e35473a0951de810360bca285ffb86f968a85541fedba74e",
+        "sanitized_sha256": "b84bc26e899d810639caa4a845bdc7d5caa4e2c64a50d3948d0227390820592d",
+        "raw_retention": "external private directory"
+      }
+    }
+  ],
+  "meaning": "Corruption rejected under documented normal execution; standalone assertion optimization hazard reproduced.",
+  "representation": "sanitized-copy-of-historical-audit-summary",
+  "tested_original_version": "1.0.0",
+  "limitation": "Historical unsafe verifier copies remain private; the public candidate contains only hardened active entry points."
+}

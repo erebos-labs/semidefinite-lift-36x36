@@ -1,0 +1,163 @@
+--- private-handoff/audit_independent.py
++++ audits/additional/audit_independent.py
+@@ -3,8 +3,8 @@
+ 
+ """Third reconstruction. No imports from handoff programs or certificates."""
+ import sympy as s, json, pathlib, hashlib
+-ROOT=pathlib.Path(__file__).resolve().parents[1]
+-out=ROOT/'independent';out.mkdir(exist_ok=True)
++ROOT=pathlib.Path(__file__).resolve().parents[2]
++out=ROOT/'evidence/independent';out.mkdir(exist_ok=True)
+ w=s.Symbol('w',nonzero=True); I=s.I
+ c=(w+1/w)/2;sn=(w-1/w)/(2*I)
+ def star(v): return s.conjugate(v).subs(s.conjugate(w),1/w)
+@@ -60,7 +60,7 @@
+                     assert (v,mode) in lookup,(i,j,v,mode)
+                     mats[lookup[v,mode]][i,j]=a
+             modechecks+=1
+-payload=json.loads((ROOT/'original/semidefinite_lift_v1.0.0/coefficients.json').read_text())
++payload=json.loads((ROOT/'coefficients.json').read_text())
+ for k,entries in enumerate(payload['coefficients']):
+     expected=s.zeros(36)
+     for i,j,(an,ad,bn,bd) in entries:expected[i,j]=expected[j,i]=s.Rational(an,ad)+s.Rational(bn,bd)*s.sqrt(2)
+--- private-handoff/matching_direct_audit.py
++++ audits/additional/matching_direct_audit.py
+@@ -3,7 +3,7 @@
+ 
+ """Direct cleared-denominator generic-S matching, no handoff imports."""
+ import sympy as s, pathlib, json, time
+-started=time.monotonic();ROOT=pathlib.Path(__file__).resolve().parents[1]
++started=time.monotonic();ROOT=pathlib.Path(__file__).resolve().parents[2]
+ w,v=s.symbols('w v',nonzero=True);I=s.I
+ def star(a):return s.conjugate(a).subs({s.conjugate(w):1/w,s.conjugate(v):1/v})
+ def real(a):return s.expand((a+star(a))/2)
+@@ -41,4 +41,4 @@
+ check(mm*adj(mm)-dd**2*s.eye(2))
+ check(real(s.trace(adj(R)*S*R))-s.trace(S*Q(z)))
+ result={'status':'PASS','arithmetic':'exact cleared-denominator Laurent polynomials','generic_symmetric_S_no_definiteness_assumption':True,'direct_matching_pairing_numerator_zero':True,'C_numerator_column_supports':supports,'generic_rotation_scaled_unitary':True,'delta_zero_branch':'Reviewed separately in written proof and reproduced 42-check replay; no division at zero','seconds_for_information':time.monotonic()-started}
+-(ROOT/'independent/direct-generic-matching.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
++(ROOT/'evidence/independent/direct-generic-matching.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
+--- private-handoff/singular_root_audit.py
++++ audits/additional/singular_root_audit.py
+@@ -2,7 +2,7 @@
+     raise RuntimeError("Run without -O: exact assertions must remain enabled")
+ 
+ import sympy as s, pathlib, json
+-ROOT=pathlib.Path(__file__).resolve().parents[1]; out=ROOT/'independent'
++ROOT=pathlib.Path(__file__).resolve().parents[2]; out=ROOT/'evidence/independent'
+ t=s.Symbol('t');rt=s.sqrt(2)
+ def Q(y):
+     a,b,c=y;return s.Matrix([[a*a+b*b,-a*b,-a*c],[-a*b,b*b+c*c,-b*c],[-a*c,-b*c,c*c+a*a]])
+@@ -43,7 +43,7 @@
+ P[16:20,32:36]=s.eye(4)
+ pairs=[(i,j) for i in range(4) for j in range(i,4)]
+ moments=[v for i,j in pairs for v in (X[i,j],X[i,j]*c2,X[i,j]*s2)]+[Z[i,j] for i,j in pairs]+[0,0,0,0,1,c2,s2]
+-payload=json.loads((ROOT/'original/semidefinite_lift_v1.0.0/coefficients.json').read_text());H=s.zeros(36)
++payload=json.loads((ROOT/'coefficients.json').read_text());H=s.zeros(36)
+ for k,entries in enumerate(payload['coefficients']):
+     for i,j,(an,ad,bn,bd) in entries:
+         a=moments[k]*(s.Rational(an,ad)+s.Rational(bn,bd)*rt);H[i,j]+=a
+--- private-handoff/hardening_controls.py
++++ public_controls.py
+@@ -3,8 +3,9 @@
+     raise RuntimeError("Run without -O: exact assertions must remain enabled")
+ 
+ import datetime, json, os, pathlib, re, shutil, subprocess, sys, tempfile
+-ROOT=pathlib.Path(__file__).resolve().parents[1]
+-LOGS=ROOT/'corrections/hardening-logs';LOGS.mkdir(exist_ok=True)
++ROOT=pathlib.Path(__file__).resolve().parent
++LOGS=ROOT/'evidence/sanitized/hardening';LOGS.mkdir(parents=True,exist_ok=True)
++from release_utils import write_sanitized_log, sanitize_text
+ records=[]
+ def require(condition,message):
+     if not condition:raise RuntimeError(message)
+@@ -13,18 +14,18 @@
+     if mode in ('-O','-OO'):flags=[mode]
+     elif mode:env['PYTHONOPTIMIZE']=mode.split('=')[1]
+     p=subprocess.run([sys.executable,*flags,*arguments],cwd=cwd,env=env,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,timeout=60)
+-    log=LOGS/(label+'.log');log.write_text(p.stdout)
++    log=LOGS/(label+'.log');log_metadata=write_sanitized_log(log,p.stdout,label)
+     require((p.returncode==0)==success, label+' unexpected exit '+str(p.returncode))
+     if guard:
+         require('exact assertions must remain enabled' in p.stdout,label+' did not hit optimization guard')
+         require(re.search(r'^\s*PASS\b|"status"\s*:\s*"PASS"',p.stdout,re.M) is None,label+' emitted a PASS claim')
+-    records.append({'control':label,'command':arguments,'mode':mode or 'normal','expected_success':success,'exit_code':p.returncode,'expectation_met':True,'no_PASS_with_assertions_disabled':guard,'log':str(log.relative_to(ROOT))})
++    records.append({'control':label,'command':arguments,'mode':mode or 'normal','expected_success':success,'exit_code':p.returncode,'expectation_met':True,'no_PASS_with_assertions_disabled':guard,'log':str(log.relative_to(ROOT)),'log_representation':log_metadata})
+     print(label+' expected outcome reproduced',flush=True)
+     return p
+ direct=[('core',['verify.py']),('independent',['audits/independent_coefficients.py','--primary-coefficients','coefficients.json']),('matching',['audits/check_matching.py']),('determinant',['audits/check_determinant_identity.py']),('full',['run_all.py'])]
+-supplemental=[('third-coefficients',['audit_evidence/audit-scripts/audit_independent.py']),('direct-generic-matching',['audit_evidence/audit-scripts/matching_direct_audit.py']),('singular-roots',['audit_evidence/audit-scripts/singular_root_audit.py'])]
++supplemental=[('third-coefficients',['audits/additional/audit_independent.py']),('direct-generic-matching',['audits/additional/matching_direct_audit.py']),('singular-roots',['audits/additional/singular_root_audit.py'])]
+ for name,args in direct+supplemental:run('normal-'+name,args)
+-guarded=direct+supplemental+[('packer',['pack_handoff.py']),('hardening-controls',['corrections/hardening_controls.py'])]
++guarded=direct+supplemental+[('packer',['pack_handoff.py']),('hardening-controls',['public_controls.py']),('privacy-scan',['privacy_scan.py'])]
+ for name,args in guarded:
+     for mode in ['-O','-OO','PYTHONOPTIMIZE=1','PYTHONOPTIMIZE=2']:
+         label='disabled-'+name+'-'+mode.replace('=','-').lstrip('-')
+@@ -70,6 +71,16 @@
+     (LOGS/'forged-PASS-summary-replaced.json').write_text(json.dumps(summary,indent=2)+'\n')
+     (d/'tests/run_summary.json').write_text(json.dumps({'status':'PASS','stages':[{'exit_code':0}]*4}))
+     run('forged-PASS-summary-cannot-authorize-packaging',['pack_handoff.py'],cwd=d,success=False)
+-result={'status':'PASS','distribution_version':'1.0.1','mathematical_payload_version':'1.0.0','completed_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'python':sys.version,'control_count':len(records),'normal_commands':len(direct+supplemental),'disabled_assertion_entrypoint_controls':4*len(guarded),'mutated_matching_disabled_controls':4,'records':records,'scope_limits':['The guards reject optimized execution; they do not implement assertion-free mathematical verification.','All original mathematical checks remain present.','Saved certificate outputs are recomputed, not treated as proof inputs.','Finite tests supplement the unchanged written proof; no new theorem review or research was performed.']}
+-(ROOT/'corrections/hardening-summary.json').write_text(json.dumps(result,indent=2)+'\n')
++    # Synthetic leak controls: values are assembled at runtime so the detector's
++    # own public source never contains a private-looking value.
++    fixtures=[('filesystem','/'+'Users'+'/'+'example-private'+'/'+'fixture.txt'),
++              ('library','libfile_'+'b'*32),
++              ('email','person'+'@'+'example.invalid'),
++              ('credential','ghp_'+'a'*40)]
++    for label,content in fixtures:
++        d=copy('privacy-'+label);(d/'deliberate-privacy-fixture.txt').write_text(content)
++        p=run('privacy-fixture-'+label+'-rejected',['privacy_scan.py'],cwd=d,success=False)
++        require(json.loads(p.stdout)['hits'],'Privacy scan was a vacuous oracle')
++result={'status':'PASS','distribution_version':'1.0.2','mathematical_payload_version':'1.0.0','completed_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'python':sanitize_text(sys.version),'control_count':len(records),'normal_commands':len(direct+supplemental),'disabled_assertion_entrypoint_controls':4*len(guarded),'mutated_matching_disabled_controls':4,'records':records,'scope_limits':['The guards reject optimized execution; they do not implement assertion-free mathematical verification.','All original mathematical checks remain present.','Saved certificate outputs are recomputed, not treated as proof inputs.','Finite tests supplement the unchanged written proof; no new theorem review or research was performed.']}
++(ROOT/'evidence/sanitized/hardening-summary.json').write_text(json.dumps(result,indent=2)+'\n')
+ print(json.dumps({k:v for k,v in result.items() if k!='records'},indent=2))
+--- private-handoff/pack_handoff.py
++++ pack_handoff.py
+@@ -13,18 +13,24 @@
+ import sys
+ import subprocess
+ import zipfile
++from release_utils import sanitize_full_replay_logs
++from privacy_scan import scan
+ 
+ 
+ def main():
+     root=Path(__file__).resolve().parent
+     version=(root/"VERSION").read_text().strip()
+-    if version!="1.0.1":
++    if version!="1.0.2":
+         raise ValueError("Update the packer intentionally for another release")
+     # Recompute all four stages; a saved PASS summary cannot authorize packaging.
+     subprocess.run([sys.executable, str(root/"run_all.py")], cwd=root, check=True)
+     summary=json.loads((root/"tests/run_summary.json").read_text())
+     if summary.get("status")!="PASS" or len(summary.get("stages",[]))!=4:
+         raise ValueError("A completed four-stage replay is required before packaging")
++    sanitize_full_replay_logs()
++    privacy=scan()
++    if privacy['hits']:
++        raise RuntimeError('Public privacy scan failed: '+json.dumps(privacy['hits']))
+     ignored={"__pycache__",".venv",".git"}
+     files=sorted(p for p in root.rglob("*") if p.is_file()
+                  and not ignored.intersection(p.relative_to(root).parts)
+@@ -33,8 +39,8 @@
+     manifest.write_text("".join(hashlib.sha256(p.read_bytes()).hexdigest()+"  "+
+                                 p.relative_to(root).as_posix()+"\n" for p in files))
+     files=sorted(files+[manifest])
+-    archive=root.parent/f"semidefinite_lift_v{version}.zip"
+-    prefix=f"semidefinite_lift_v{version}"
++    archive=root.parent/f"semidefinite_lift_public_v{version}.zip"
++    prefix=f"semidefinite_lift_public_v{version}"
+     with zipfile.ZipFile(archive,"w",compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
+         for p in files:
+             info=zipfile.ZipInfo(prefix+"/"+p.relative_to(root).as_posix(),
+@@ -48,7 +54,7 @@
+         for p in files:
+             if z.read(prefix+"/"+p.relative_to(root).as_posix())!=p.read_bytes():
+                 raise ValueError("ZIP byte mismatch: "+str(p))
+-    print(json.dumps({"archive":str(archive),"version":version,"files":len(files),
++    print(json.dumps({"archive":archive.name,"version":version,"files":len(files),
+                       "bytes":archive.stat().st_size,
+                       "sha256":hashlib.sha256(archive.read_bytes()).hexdigest(),
+                       "zip_crc_and_all_entry_bytes":"PASS"},indent=2))

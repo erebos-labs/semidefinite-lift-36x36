@@ -1,0 +1,18 @@
+{
+  "upstream_license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+  "source_commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "actions": [
+    {
+      "repository": "actions/checkout",
+      "release_tag": "v7.0.1",
+      "commit": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "release_url": "https://github.com/actions/checkout/releases/tag/v7.0.1"
+    },
+    {
+      "repository": "actions/setup-python",
+      "release_tag": "v7.0.0",
+      "commit": "5fda3b95a4ea91299a34e894583c3862153e4b97",
+      "release_url": "https://github.com/actions/setup-python/releases/tag/v7.0.0"
+    }
+  ]
+}

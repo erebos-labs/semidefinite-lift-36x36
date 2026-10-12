@@ -1,0 +1,146 @@
+{
+  "status": "PASS",
+  "tested_utc": "2026-10-12T09:08:36.561573+00:00",
+  "public_version": "1.0.2",
+  "clean_extraction": true,
+  "fresh_virtual_environment": true,
+  "dependencies_installed_offline_from_pinned_wheels": true,
+  "python": "3.14.7",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "normal_commands_passed": 8,
+  "control_count": 70,
+  "disabled_assertion_refusals": 44,
+  "mutated_matching_disabled_refusals": 4,
+  "privacy_fixture_refusals": 4,
+  "scientific_and_verification_inputs": [
+    {
+      "path": "source/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "source/UPSTREAM_README.md",
+      "sha256": "c6fa0452642c71ed333d4167b26294604e6a1274e9693353811831a9883b24e5"
+    },
+    {
+      "path": "source/manifest.json",
+      "sha256": "0009d352ccd22d91f4be084631102cbf7d2f7795266ebaba69254b7ee2aa27a4"
+    },
+    {
+      "path": "source/license_provenance.json",
+      "sha256": "db0b15f2861ef95df12367c6110791130f8f576d2b8a857ff6bfd2f19e57a525"
+    },
+    {
+      "path": "source/build/references.bib",
+      "sha256": "69097dd44b5b5609d5625baefe2177f5543eff69f025a8ee10d11282b49e4733"
+    },
+    {
+      "path": "source/build/main.tex",
+      "sha256": "f2da9ad0223d850007e105b5a03c633d4450855caa5a83b17533bf87f72a4956"
+    },
+    {
+      "path": "source/build/sections/lift.tex",
+      "sha256": "2e01df842b3ddd9690559dcfb878c26912ebdfcc1eb2489647d875617524e414"
+    },
+    {
+      "path": "source/build/sections/slices.tex",
+      "sha256": "e7783884f9ca091d58209b84e4774574ae2ed88d6db659c259c36825b51f41bc"
+    },
+    {
+      "path": "source/build/sections/angular.tex",
+      "sha256": "74168b4a03392b554ed1a592c07f8d24fe3ad8d126585b3ddd097332688c041e"
+    },
+    {
+      "path": "source/build/sections/introduction.tex",
+      "sha256": "a85e3e5793e2d8ee6b0f9a038dd751583deb03c19b9e9ba310c1ed5660135b32"
+    },
+    {
+      "path": "source/build/sections/matching.tex",
+      "sha256": "8e9ffd25ef15e7b891051ff18be578def7770a92bda5e9cf246e3078fd62ad91"
+    },
+    {
+      "path": "THEOREM_PROOF.md",
+      "sha256": "4b1fc643972d3c48d42f81f288b5d45d1668ca611cfb5a6470fde301b8f70699"
+    },
+    {
+      "path": "COORDINATES.md",
+      "sha256": "edbdb8c6c45f150375a41fa4710a5451e41949ce1cb30de5fb3933f14ff44805"
+    },
+    {
+      "path": "generator.py",
+      "sha256": "d28b1a05384c0e35b077fb007f5fdec5a7fb2d60484546932284af42aa3f3b40"
+    },
+    {
+      "path": "coefficients.json",
+      "sha256": "7cde0d71918a594a4bc246f786fcce11989fee66fd6071684e4f719e624daf9e"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "2677ab09794c0564bb41bfb9e125765dbd82a434cef4de82f84d11b52f1d2221"
+    },
+    {
+      "path": "run_all.py",
+      "sha256": "c94bf425cb3abba1f5fb4db09d044ecbbf4fb19602752adafb48d38c07a87f8d"
+    },
+    {
+      "path": "audits/independent_coefficients.py",
+      "sha256": "d72a4ae4e632bf05664ef105576fe1a14f2bc4686d7cb4e71a9ec5d31b9ad4ea"
+    },
+    {
+      "path": "audits/check_matching.py",
+      "sha256": "390421545901b52620ccbeee2ba9c8c86277530f9eebd8e9ee140509b145e7b1"
+    },
+    {
+      "path": "audits/check_determinant_identity.py",
+      "sha256": "f3a67017164264562bf166c659e67330632713d7ce8a636b5198e75e5bdaf893"
+    },
+    {
+      "path": "audits/additional/audit_independent.py",
+      "sha256": "74fb12baeed6ec28e0d8bc8cbd8b6ea0badedb0c9e6bedf26b41e8ab490bcbb1"
+    },
+    {
+      "path": "audits/additional/matching_direct_audit.py",
+      "sha256": "1f36b9851fc8db951823586824bfdb57c6eef1e305476970b56ca137f9150ba9"
+    },
+    {
+      "path": "audits/additional/singular_root_audit.py",
+      "sha256": "5fda0291639a765fa16cae6868e210a507da7bd1222f1202fcb201489120d1c1"
+    },
+    {
+      "path": "public_controls.py",
+      "sha256": "f0aaf632c40b911cb6aff8e44a725c066a50947a964c361d2e4cc4ec30158b68"
+    },
+    {
+      "path": "privacy_scan.py",
+      "sha256": "17628c05b7f6c0675c0c10997df79fb47fc9fcde874bc37621cf7a1ddd91eb31"
+    },
+    {
+      "path": "release_utils.py",
+      "sha256": "c71c6655ef7353ff9f108aafb9dfce99ec11015f298332900682aa2d35a925df"
+    },
+    {
+      "path": "pack_handoff.py",
+      "sha256": "4157883e63bae4aa61b471cb0af1a63fcfc07c34b677e0d9d9994079a823eea9"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "c533ff58a7a31ba8e75c8308fe348bdadf5c990eaaf1b8ade414f91b069649d2"
+    },
+    {
+      "path": "constraints.txt",
+      "sha256": "47fd19021144e071cc43b6e265aafada0056abe89724ad95bd6e3a8e37995b94"
+    },
+    {
+      "path": ".github/workflows/verify.yml",
+      "sha256": "01fc1191ae35b5133a0cc6cef115cb1e6c5e6a6c5c26499fd884074dfc51da11"
+    }
+  ],
+  "public_log_representation": "sanitized copies; raw execution logs retained privately",
+  "hosted_CI_executed": false,
+  "local_python_3_11_execution": false,
+  "limits": [
+    "Exact finite computation supplements the unchanged written proof.",
+    "No new mathematical research or independent review of companion nonspectrahedrality.",
+    "Privacy evidence is a deterministic scan plus manual content review, not a formal non-disclosure proof."
+  ]
+}

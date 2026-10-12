@@ -1,0 +1,15 @@
+{
+  "arithmetic": "Exact Q(sqrt(2),i); no floating point",
+  "coefficient_matrices_compared": 47,
+  "directed_source_contractions_checked": 28512,
+  "frequency_support_checked": true,
+  "full_matrix_scalar_entries_compared": 60912,
+  "lower_triangle_complete_coefficient_dictionary_equality": true,
+  "matrix_size": 36,
+  "method": "Independent Laurent q_i^T L_theta q_j reconstruction compared with compact primary coefficient JSON",
+  "nonzero_upper_entries": 298,
+  "primary_coefficients_sha256": "7cde0d71918a594a4bc246f786fcce11989fee66fd6071684e4f719e624daf9e",
+  "realification_and_coordinate_order_checked": true,
+  "status": "PASS",
+  "upper_triangle_scalar_entries_compared": 31302
+}

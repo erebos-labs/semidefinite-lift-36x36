@@ -1,0 +1,49 @@
+{
+  "repository": "https://github.com/openai/math",
+  "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "folder": "preprints/An-Exact-Semidefinite-Lift-of-a-Nonspectrahedral-Hyperbolicity-Cone-October-5-2026/",
+  "files": [
+    {
+      "path": "build/main.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/An-Exact-Semidefinite-Lift-of-a-Nonspectrahedral-Hyperbolicity-Cone-October-5-2026/build/main.tex",
+      "bytes": 1623,
+      "sha256": "f2da9ad0223d850007e105b5a03c633d4450855caa5a83b17533bf87f72a4956"
+    },
+    {
+      "path": "build/sections/introduction.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/An-Exact-Semidefinite-Lift-of-a-Nonspectrahedral-Hyperbolicity-Cone-October-5-2026/build/sections/introduction.tex",
+      "bytes": 6328,
+      "sha256": "a85e3e5793e2d8ee6b0f9a038dd751583deb03c19b9e9ba310c1ed5660135b32"
+    },
+    {
+      "path": "build/sections/angular.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/An-Exact-Semidefinite-Lift-of-a-Nonspectrahedral-Hyperbolicity-Cone-October-5-2026/build/sections/angular.tex",
+      "bytes": 1960,
+      "sha256": "74168b4a03392b554ed1a592c07f8d24fe3ad8d126585b3ddd097332688c041e"
+    },
+    {
+      "path": "build/sections/slices.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/An-Exact-Semidefinite-Lift-of-a-Nonspectrahedral-Hyperbolicity-Cone-October-5-2026/build/sections/slices.tex",
+      "bytes": 3559,
+      "sha256": "e7783884f9ca091d58209b84e4774574ae2ed88d6db659c259c36825b51f41bc"
+    },
+    {
+      "path": "build/sections/matching.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/An-Exact-Semidefinite-Lift-of-a-Nonspectrahedral-Hyperbolicity-Cone-October-5-2026/build/sections/matching.tex",
+      "bytes": 7641,
+      "sha256": "8e9ffd25ef15e7b891051ff18be578def7770a92bda5e9cf246e3078fd62ad91"
+    },
+    {
+      "path": "build/sections/lift.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/An-Exact-Semidefinite-Lift-of-a-Nonspectrahedral-Hyperbolicity-Cone-October-5-2026/build/sections/lift.tex",
+      "bytes": 8579,
+      "sha256": "2e01df842b3ddd9690559dcfb878c26912ebdfcc1eb2489647d875617524e414"
+    },
+    {
+      "path": "build/references.bib",
+      "url": "https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/An-Exact-Semidefinite-Lift-of-a-Nonspectrahedral-Hyperbolicity-Cone-October-5-2026/build/references.bib",
+      "bytes": 3181,
+      "sha256": "69097dd44b5b5609d5625baefe2177f5543eff69f025a8ee10d11282b49e4733"
+    }
+  ]
+}

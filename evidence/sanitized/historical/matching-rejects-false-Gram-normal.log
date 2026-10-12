@@ -1,0 +1,12 @@
+SANITIZED EXECUTION LOG: filesystem paths redacted; outcomes and algebra unchanged.
+Traceback (most recent call last):
+  File "<filesystem-path>", line 131, in <module>
+    check("realification_order_and_angular_Gram", RF * RF.T - Q(y) + s.eye(3))
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<filesystem-path>", line 59, in check
+    zero(a)
+    ~~~~^^^
+  File "<filesystem-path>", line 55, in zero
+    assert normal(entry) == 0, str(normal(entry))
+           ^^^^^^^^^^^^^^^^^^
+AssertionError: 1

@@ -1,0 +1,6 @@
+SANITIZED EXECUTION LOG: filesystem paths redacted; outcomes and algebra unchanged.
+PASS core
+PASS independent
+PASS matching
+PASS determinant
+PASS all exact verification stages; see tests/run_summary.json

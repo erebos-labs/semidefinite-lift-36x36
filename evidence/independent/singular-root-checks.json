@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact symbolic/rational",
+  "checks": [
+    {
+      "case": "off-diagonal-singular-X-with-positive-residual",
+      "degree": 20,
+      "original_p_equals_characteristic_polynomial": true,
+      "zero_root_multiplicity": 7,
+      "factorization": "t**7*(t - 4)*(t - 3)**5*(t - 1)**2*(3*t - 7)*(t**2 - 3*t + 1)**2/3"
+    },
+    {
+      "case": "noncardinal-angle-finite-witness",
+      "w": "3/5+4i/5",
+      "cos2": "-7/25",
+      "sin2": "24/25",
+      "slice_rank": 13,
+      "lift_rank": 13,
+      "H_equals_PtLP": true
+    },
+    {
+      "case": "pseudoinverse-only-invalid-point",
+      "degree": 20,
+      "original_p_equals_characteristic_polynomial": true,
+      "zero_root_multiplicity": 14,
+      "factorization": "t**14*(t - 2)**2*(t - 1)**2*(t**2 - 2)"
+    },
+    {
+      "case": "pseudoinverse-only-invalid-point",
+      "Schur_residual": "zero",
+      "negative_principal_minor": "-1/2",
+      "range_condition_fails": true
+    },
+    {
+      "case": "X-zero-nonzero-y-invalid-point",
+      "degree": 20,
+      "original_p_equals_characteristic_polynomial": true,
+      "zero_root_multiplicity": 13,
+      "factorization": "t**13*(t - 2)*(t - 1)*(t + 1)*(t**2 - t - 1)**2"
+    },
+    {
+      "case": "origin",
+      "degree": 20,
+      "original_p_equals_characteristic_polynomial": true,
+      "zero_root_multiplicity": 20,
+      "factorization": "t**20"
+    }
+  ],
+  "limits": "Finite regressions supplement the universal written singular proof."
+}

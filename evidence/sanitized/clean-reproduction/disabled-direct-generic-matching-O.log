@@ -1,0 +1,5 @@
+SANITIZED EXECUTION LOG: filesystem paths redacted; outcomes and algebra unchanged.
+Traceback (most recent call last):
+  File "<filesystem-path>", line 2, in <module>
+    raise RuntimeError("Run without -O: exact assertions must remain enabled")
+RuntimeError: Run without -O: exact assertions must remain enabled

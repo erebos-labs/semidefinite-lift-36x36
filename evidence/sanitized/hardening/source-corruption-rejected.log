@@ -1,0 +1,14 @@
+SANITIZED EXECUTION LOG: filesystem paths redacted; outcomes and algebra unchanged.
+Traceback (most recent call last):
+  File "<filesystem-path>", line 310, in <module>
+    main()
+    ~~~~^^
+  File "<filesystem-path>", line 297, in main
+    result["checks"][name]=fn()
+                           ~~^^
+  File "<filesystem-path>", line 92, in source_hashes
+    require(actual == rec["sha256"], "source hash mismatch: "+rec["path"])
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<filesystem-path>", line 31, in require
+    raise AssertionError(message)
+AssertionError: source hash mismatch: build/sections/angular.tex
