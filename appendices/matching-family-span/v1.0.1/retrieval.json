@@ -1,0 +1,36 @@
+{
+  "repository": "https://github.com/erebos-labs/semidefinite-lift-36x36",
+  "commit": "2d2c170206ab937bcf56ff3290066cc3b2dfdd99",
+  "files": [
+    {
+      "path": "THEOREM_PROOF.md",
+      "bytes": 33115,
+      "sha256": "4b1fc643972d3c48d42f81f288b5d45d1668ca611cfb5a6470fde301b8f70699",
+      "url": "https://raw.githubusercontent.com/erebos-labs/semidefinite-lift-36x36/2d2c170206ab937bcf56ff3290066cc3b2dfdd99/THEOREM_PROOF.md"
+    },
+    {
+      "path": "COORDINATES.md",
+      "bytes": 4988,
+      "sha256": "edbdb8c6c45f150375a41fa4710a5451e41949ce1cb30de5fb3933f14ff44805",
+      "url": "https://raw.githubusercontent.com/erebos-labs/semidefinite-lift-36x36/2d2c170206ab937bcf56ff3290066cc3b2dfdd99/COORDINATES.md"
+    },
+    {
+      "path": "generator.py",
+      "bytes": 6738,
+      "sha256": "d28b1a05384c0e35b077fb007f5fdec5a7fb2d60484546932284af42aa3f3b40",
+      "url": "https://raw.githubusercontent.com/erebos-labs/semidefinite-lift-36x36/2d2c170206ab937bcf56ff3290066cc3b2dfdd99/generator.py"
+    },
+    {
+      "path": "certificates/rank_kernel.json",
+      "bytes": 10229,
+      "sha256": "f8cd990f9afe94198677eab578fba4692f364937487c711a5b6bfce76038d3b7",
+      "url": "https://raw.githubusercontent.com/erebos-labs/semidefinite-lift-36x36/2d2c170206ab937bcf56ff3290066cc3b2dfdd99/certificates/rank_kernel.json"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1068,
+      "sha256": "1d381c1586a3d8e0bacbb9fc1ea7509c4d225d89ca7ec363f08f8a3df9df92b0",
+      "url": "https://raw.githubusercontent.com/erebos-labs/semidefinite-lift-36x36/2d2c170206ab937bcf56ff3290066cc3b2dfdd99/LICENSE"
+    }
+  ]
+}

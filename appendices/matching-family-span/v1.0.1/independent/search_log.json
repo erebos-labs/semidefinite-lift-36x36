@@ -1,0 +1,26 @@
+{
+  "branches_scanned": {
+    "delta=0": 280,
+    "delta>0": 358
+  },
+  "branches_selected": {
+    "delta=0": 8,
+    "delta>0": 24
+  },
+  "constants_selected": 4,
+  "declared_grid_sha256": "e4dea3bda394de5860dc73a51436f817a29fee94b840b468663a13b39e59582f",
+  "limitations": [
+    "One finite grid; no adaptive expansion and no alternative lift search.",
+    "This determines the span of the exhibited admissible tests, not lower bounds on arbitrary semidefinite lifts.",
+    "Source matching admissibility is reconstructed from exact formulas; a separate verifier should check this witness independently."
+  ],
+  "matching_candidates_scanned": 638,
+  "matching_tests_selected": 32,
+  "maximum_matching_candidates": 1881,
+  "original_matrix_determinant": "-1/8000",
+  "rank": 36,
+  "scaled_matrix_determinant": "-1024/125",
+  "status": "FULL_RANK_WITNESS",
+  "stopped_immediately_at_full_rank": true,
+  "witness_sha256": "481e5c5ef4ab866624ac77ca737bd0fb7dab73af7a300dc417f3be27f068d327"
+}

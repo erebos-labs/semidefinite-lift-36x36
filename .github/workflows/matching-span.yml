@@ -1,0 +1,77 @@
+name: Matching-family span appendix
+'on':
+  push:
+    paths:
+      - 'appendices/matching-family-span/**'
+      - '.github/workflows/matching-span.yml'
+  pull_request:
+    paths:
+      - 'appendices/matching-family-span/**'
+      - '.github/workflows/matching-span.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fixed-witness:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.14']
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            constraints.txt
+      - name: Install pinned exact dependencies
+        run: python -m pip install -r requirements.txt -c constraints.txt
+      - name: Check appendix inventory
+        working-directory: appendices/matching-family-span/v1.0.1
+        run: sha256sum -c CHECKSUMS.sha256
+      - name: Replay both fixed-witness checkers
+        working-directory: appendices/matching-family-span/v1.0.1
+        run: |
+          python verify_span.py --report "$RUNNER_TEMP/span-primary.json"
+          python independent/check_fixed_witness_sympy.py --output "$RUNNER_TEMP/span-sympy.json"
+      - name: Verify optimization refusal and corrupt certificates
+        working-directory: appendices/matching-family-span/v1.0.1
+        run: |
+          python - <<'PY'
+          import json, os, pathlib, shutil, subprocess, sys, tempfile
+          root=pathlib.Path.cwd()
+          def reject(args, cwd=root, env=None):
+              p=subprocess.run(args,cwd=cwd,env=env,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,timeout=60)
+              if p.returncode == 0 or '"status": "PASS"' in p.stdout:
+                  raise RuntimeError('Corrupt/optimized primary verification unexpectedly passed')
+              return p.stdout
+          for opt in ['-O','-OO']:
+              if 'exact assertions must remain enabled' not in reject([sys.executable,opt,'verify_span.py']):
+                  raise RuntimeError('Missing explicit primary optimization refusal')
+          for opt in ['1','2']:
+              env=os.environ.copy();env['PYTHONOPTIMIZE']=opt
+              if 'exact assertions must remain enabled' not in reject([sys.executable,'verify_span.py'],env=env):
+                  raise RuntimeError('Missing explicit environment optimization refusal')
+          with tempfile.TemporaryDirectory() as tmp:
+              bad=pathlib.Path(tmp)/'bad-inverse';shutil.copytree(root,bad)
+              f=bad/'exact_rank_certificate.json';v=json.loads(f.read_text())
+              v['inverse_certificate']['integer_multiplier'][0][0]+=1;f.write_text(json.dumps(v))
+              reject([sys.executable,'verify_span.py'],cwd=bad)
+              bad=pathlib.Path(tmp)/'bad-witness';shutil.copytree(root,bad)
+              f=bad/'independent/span_witness.json';v=json.loads(f.read_text())
+              v['scaled_matrix_rows'][0][0]='2';v['scaled_columns'][0][0]='2';f.write_text(json.dumps(v))
+              reject([sys.executable,'-O','independent/check_fixed_witness_sympy.py','--output',str(pathlib.Path(tmp)/'bad-report.json')],cwd=bad)
+          print('PASS: four optimization refusals and two corrupted-certificate rejections')
+          PY
+      - name: Check appendix remains byte-identical
+        working-directory: appendices/matching-family-span/v1.0.1
+        run: sha256sum -c CHECKSUMS.sha256
+      - name: Public repository privacy scan
+        run: python privacy_scan.py

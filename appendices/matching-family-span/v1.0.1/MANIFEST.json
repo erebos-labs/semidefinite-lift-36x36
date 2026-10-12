@@ -1,0 +1,152 @@
+{
+  "handoff": "matching-test-span-obstruction",
+  "version": "1.0.1",
+  "source_commit": "2d2c170206ab937bcf56ff3290066cc3b2dfdd99",
+  "result": "exact full-span obstruction for the specified augmented test family",
+  "manifest_excludes": [
+    "MANIFEST.json",
+    "CHECKSUMS.sha256"
+  ],
+  "files": [
+    {
+      "path": "ATTRIBUTION.md",
+      "bytes": 1445,
+      "sha256": "66ca67f5a6d02f61bd09a05ebcc3f25360bd32083069c663a3547aa65ec35250"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1287,
+      "sha256": "48fbb66ae6af7599ddf8c54dff34808f9ac31f2d01e6d83b498cfb2ae12f1cc7"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1068,
+      "sha256": "1d381c1586a3d8e0bacbb9fc1ea7509c4d225d89ca7ec363f08f8a3df9df92b0"
+    },
+    {
+      "path": "LICENSES/Apache-2.0.txt",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "LICENSING.md",
+      "bytes": 2713,
+      "sha256": "bedc9fbda6b170daf2540a206315dc49170cd4f9348a2f185483d956c763d909"
+    },
+    {
+      "path": "NOTICE",
+      "bytes": 1602,
+      "sha256": "68652ce19f75ee12ffc7d122af9c0b6f56f55ad882a382368c2b0f3dc0ff469d"
+    },
+    {
+      "path": "PROOF.md",
+      "bytes": 16256,
+      "sha256": "5c932d9b855a3d21cea076e335fd0d5b479bd4a81dbf17decaaba2a0f4f0e5e9"
+    },
+    {
+      "path": "PUBLIC_PROVENANCE.json",
+      "bytes": 6880,
+      "sha256": "2f865df539358335b5639dfadfaa6e62b61827a43b2f09fb572e3be17645bef8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4747,
+      "sha256": "de74c00e4eacb5a8f3c5d7e60c85f7fb98d0749ebf57101c2f850120283e2ec4"
+    },
+    {
+      "path": "REPACK_CHANGES.md",
+      "bytes": 1436,
+      "sha256": "d3a89e0d6068f7ef900c61448f7a3dc89f7c2a7cc3e2fed9cff2ff09e3002d1b"
+    },
+    {
+      "path": "exact_rank_certificate.json",
+      "bytes": 29505,
+      "sha256": "fba4addf3dcf5596a941bc1e76e6470217108e02f04c62bc6219c574473a9b2a"
+    },
+    {
+      "path": "independent/MATCHING_FAMILY_AUDIT.md",
+      "bytes": 7952,
+      "sha256": "cccc56e610f33d4fc68a052b2c17b27e650f4244fcbe1b3284a55f9f8e5ffdfa"
+    },
+    {
+      "path": "independent/README.md",
+      "bytes": 6034,
+      "sha256": "ff3b4b36d64e9cf047bb9965113b6805993b39fdb447c6450880458c1aa0a5fc"
+    },
+    {
+      "path": "independent/check_fixed_witness_sympy.py",
+      "bytes": 8203,
+      "sha256": "822eef0c1e2276a29151e9a6f265189856f0ff1e465b22bd856c160377bdf41b"
+    },
+    {
+      "path": "independent/declared_grid.json",
+      "bytes": 9365,
+      "sha256": "e4dea3bda394de5860dc73a51436f817a29fee94b840b468663a13b39e59582f"
+    },
+    {
+      "path": "independent/search_log.json",
+      "bytes": 989,
+      "sha256": "ff765b0cb06304a5709e0ee301b2c7ece70725bf84549b1eb24b884ee32365f5"
+    },
+    {
+      "path": "independent/search_matching_span.py",
+      "bytes": 14790,
+      "sha256": "a32ad685374521f5e9ca952de46f129dffbec829964f9601cfc00c076f76b1a4"
+    },
+    {
+      "path": "independent/span_witness.json",
+      "bytes": 63243,
+      "sha256": "481e5c5ef4ab866624ac77ca737bd0fb7dab73af7a300dc417f3be27f068d327"
+    },
+    {
+      "path": "independent/sympy_witness_review.json",
+      "bytes": 1777,
+      "sha256": "fc45e0ccc44fc195c894ec927cf070932ac231a032d0c247e0c3c16b54052bdc"
+    },
+    {
+      "path": "retrieval.json",
+      "bytes": 1623,
+      "sha256": "b3e92477a08accbfb5a94f7b291d1eff1ae55f3ffa0da6114517d98f19a1d3b0"
+    },
+    {
+      "path": "source/COORDINATES.md",
+      "bytes": 4988,
+      "sha256": "edbdb8c6c45f150375a41fa4710a5451e41949ce1cb30de5fb3933f14ff44805"
+    },
+    {
+      "path": "source/LICENSE",
+      "bytes": 1068,
+      "sha256": "1d381c1586a3d8e0bacbb9fc1ea7509c4d225d89ca7ec363f08f8a3df9df92b0"
+    },
+    {
+      "path": "source/THEOREM_PROOF.md",
+      "bytes": 33115,
+      "sha256": "4b1fc643972d3c48d42f81f288b5d45d1668ca611cfb5a6470fde301b8f70699"
+    },
+    {
+      "path": "source/certificates/rank_kernel.json",
+      "bytes": 10229,
+      "sha256": "f8cd990f9afe94198677eab578fba4692f364937487c711a5b6bfce76038d3b7"
+    },
+    {
+      "path": "source/generator.py",
+      "bytes": 6738,
+      "sha256": "d28b1a05384c0e35b077fb007f5fdec5a7fb2d60484546932284af42aa3f3b40"
+    },
+    {
+      "path": "span_algebra.py",
+      "bytes": 8241,
+      "sha256": "915676aaa4fb96530891ea5f3b10e4e3c6868aaf049f2a8dc475e7ec2f6e0dcb"
+    },
+    {
+      "path": "verification_report.json",
+      "bytes": 1139,
+      "sha256": "278102e3c69368cff3f53cde460f466f75a9c9385dc530bc55697655f6707caa"
+    },
+    {
+      "path": "verify_span.py",
+      "bytes": 6304,
+      "sha256": "15cc64d31c6562b567951c9186e0e086d066e038762f8dccc4d05e37847e111e"
+    }
+  ]
+}

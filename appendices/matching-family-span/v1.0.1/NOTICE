@@ -1,0 +1,28 @@
+Matching-test span obstruction — distribution 1.0.1
+
+The upstream construction is OpenAI, An Exact Semidefinite Lift of a
+Nonspectrahedral Hyperbolicity Cone, October 5, 2026, openai/math commit
+fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb, licensed under Apache-2.0.
+
+The directly consumed baseline is erebos-labs/semidefinite-lift-36x36 at
+2d2c170206ab937bcf56ff3290066cc3b2dfdd99. The five files under source/ are
+unchanged copies of the requested baseline files, not a complete upstream
+manuscript bundle. THEOREM_PROOF.md is the baseline's adapted/compressed
+exposition and retains Apache-2.0 terms. The baseline root MIT license is
+preserved separately from the Apache-2.0 text.
+
+Angular factorization, matching rotation, the functional framework and the
+singular-boundary proof mechanism are inherited from the upstream construction.
+The nonspectrahedrality premise comes from its cited companion proof and is
+not independently re-established by this follow-up.
+
+PROOF.md and the matching reviews analyze that prescribed test family; they
+are adaptations and are not the upstream manuscript. Version 1.0.1 changes
+licensing descriptions and distribution metadata only. Mathematical content,
+all fixed witness/certificate data and checker code are preserved.
+
+Scoped MIT terms cover original implementation and new distribution materials
+only within the contributor's rights. Apache-2.0 terms remain applicable to
+source-derived exposition. See LICENSING.md and LICENSES/Apache-2.0.txt.
+No claim of novelty, global minimality, peer review, Lean verification or
+measured solver performance is made.
