@@ -94,6 +94,8 @@ or novelty claim is investigated. No old coefficient-rank/common-kernel audit
 is rerun. The lift, all 23 outputs and 24 auxiliaries, its degree-20 cone
 definition, and its singular-boundary proof remain unchanged.
 
+The following describes preparation of the original fixed-witness package, before its publication as `matching-span-v1.0.1`. See the repository-root [publication status](../../../PUBLICATION_STATUS.md) for the later publication record.
+
 The search stopped upon the first exact full-rank witness. Subsequent work
 only verified this fixed witness and prepared this handoff. No publication,
 repository mutation, external communication, or scheduled follow-up was made.

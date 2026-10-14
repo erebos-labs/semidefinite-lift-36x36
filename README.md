@@ -1,6 +1,6 @@
 # Exact 36 × 36 semidefinite lift
 
-Public candidate **1.0.2** provides an explicit homogeneous real symmetric pencil over Q(sqrt(2)), with **23 outputs and 24 auxiliaries**, for the entire closed cone defined by the pinned degree-20 polynomial. Singular X and zero-root multiplicities are included.
+Release **1.0.2** provides an explicit homogeneous real symmetric pencil over Q(sqrt(2)), with **23 outputs and 24 auxiliaries**, for the entire closed cone defined by the pinned degree-20 polynomial. Singular X and zero-root multiplicities are included.
 
 The mathematical payload is unchanged from the audited v1.0.0 theorem and the hardened v1.0.1 handoff. This release changes privacy, distribution metadata, portable audit paths, and packaging. The matrices, coordinate ordering, source, verifier formulas, and assertion guards are preserved.
 
@@ -18,7 +18,7 @@ python3 -m venv .venv
 .venv/bin/python privacy_scan.py
 ```
 
-`run_all.py` performs four exact stages: core coefficients/ranks/regressions, independent Laurent reconstruction, matching, and polynomial determinant elimination. `public_controls.py` checks direct entry points, optimized-execution refusal, deliberate corruption, and recomputation of forged saved certificates. It also reruns three supplemental reconstructions. The CI workflow runs these commands with read-only repository permissions; no hosted CI run is claimed for this local candidate.
+`run_all.py` performs four exact stages: core coefficients/ranks/regressions, independent Laurent reconstruction, matching, and polynomial determinant elimination. `public_controls.py` checks direct entry points, optimized-execution refusal, deliberate corruption, and recomputation of forged saved certificates. It also reruns three supplemental reconstructions. The CI workflow runs these commands with read-only repository permissions. Recorded publication and CI provenance, with their verification limits, is summarized in [PUBLICATION_STATUS.md](PUBLICATION_STATUS.md).
 
 Every revised verification entry point refuses `-O`, `-OO`, and positive PYTHONOPTIMIZE settings before claiming PASS. Verification requires assertions enabled. The removed historical scripts with the diagnosed hazard are retained privately, not included here.
 
@@ -54,4 +54,4 @@ Human mathematical review can increase confidence but is not an unresolved proof
 
 Original implementation code and new release materials use the [MIT license](LICENSE). Bundled upstream source and source-derived proof/review documentation retain Apache-2.0 terms. This is a scoped multi-license distribution: **MIT does not relicense third-party content**. See [LICENSING.md](LICENSING.md) for the file-level scope and ownership limitations.
 
-This is a local candidate. No repository was created, no commit or push was made, and no publication or external message occurred. Proposed repository name: `semidefinite-lift-36x36`.
+The main package was published as `v1.0.2`; the matching-family appendix was published as `matching-span-v1.0.1`. Earlier local-candidate/no-publication wording describes package preparation history. See [PUBLICATION_STATUS.md](PUBLICATION_STATUS.md) for the current publication record and audit limits.
